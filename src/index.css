@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-glow: #00f2fe;
+  --secondary-glow: #4facfe;
+  --accent-color: #00f2fe;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(13, 17, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(20, 27, 45, 0.85);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 242, 254, 0.15);
+  transform: translateY(-2px);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+}
+
+.border-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+/* Cyber grid background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Code block styling */
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Utility: hide scrollbar while preserving scroll functionality */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scale for hand SVG hover */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
